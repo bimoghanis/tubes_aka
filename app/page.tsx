@@ -5,7 +5,7 @@ import { Bar } from "react-chartjs-2";
 import {
   kombinasiIteratif,
   kombinasiRekursif,
-  permutasiIteratif,
+  permutasiIteratif,  // Pastikan ini mengimpor versi iteratif yang baru
   permutasiRekursif,
 } from "../utils/algorithms";
 import {
@@ -70,7 +70,7 @@ export default function Home() {
 
     // Permutasi Iteratif
     const startPermutasiIteratif = performance.now();
-    const permutasiIteratifResult = permutasiIteratif(inputNames, r);
+    const permutasiIteratifResult = permutasiIteratif(inputNames, r);  // Menggunakan versi baru
     const endPermutasiIteratif = performance.now();
     newResults["Permutasi Iteratif"] = {
       data: permutasiIteratifResult,
@@ -242,7 +242,7 @@ export default function Home() {
             </div>
           ))}
           <div className="col-span-1 md:col-span-2 bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-xl font-semibold text-teal-600 mb-4">
+            <h2 className="text-2xl font-semibold text-teal-600 text-center mb-6">
               Grafik Waktu Eksekusi
             </h2>
             <Bar data={chartData} options={chartOptions} />
